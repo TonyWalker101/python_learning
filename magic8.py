@@ -1,6 +1,7 @@
 #magic 8 ball program that responds to user questions
 
 import random
+import sys
 
 # setup
 name = input("Hello! What is your name? ")
@@ -8,6 +9,11 @@ name = input("Hello! What is your name? ")
 question = input("Ask me a Yes or No question: ")
 
 answer = ""
+
+# if missing user input
+if name == "" or question == "":
+  print("I need a name and question in order to predict the future!")
+  sys.exit()
 
 # answer logic
 random_number = random.randint(1,9)
