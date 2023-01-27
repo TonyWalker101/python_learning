@@ -18,10 +18,9 @@ cost_standard = 0
 cost_premium = 0
 cost_drone= 0
 
-  # ground shipping
 
 if premium == False and drone == False:
-
+  # ground shipping
   if weight <= 2:
     cost_standard = (1.50 * weight) + flat_rate
   elif weight <= 6:
@@ -31,11 +30,11 @@ if premium == False and drone == False:
   else:
     cost_standard = (4.75 * weight) + flat_rate
   print("Standard ground shipping costs: ", round(cost_standard,2),"$")
-# premium group shipping
+  # premium group shipping
 elif premium == True and drone == False:
   cost_premium = 125.00
   print("Premium ground shipping costs: ", round(cost_premium,2), "$")
-# drone shipping
+  # drone shipping
 elif premium == False and drone == True:
   if weight <= 2:
     cost_drone = (4.50 * weight)
