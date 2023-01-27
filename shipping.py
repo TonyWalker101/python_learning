@@ -1,34 +1,76 @@
 # program to determine the best package-shipping rate possible
 
-weight = 8.4
-cost = 0
+# change weight variable to see options
+weight = 41.5
 
-# ground shipping
+''' 
+standard shipping => premium & drone == False
+premium shipping => premium == True, drone == False
+drone shipping => premium == False, drone == True
+all options => premium & drone == True 
+'''
+premium = True
+drone = True
+
+# static variables
 flat_rate = 20.00
+cost_standard = 0
+cost_premium = 0
+cost_drone= 0
 
-if weight <= 2:
-  cost = (1.50 * weight) + flat_rate
-  print(cost)
-elif weight <= 6:
-  cost = (3.00 * weight) + flat_rate
-  print(cost)
-elif weight <= 10:
-  cost = (4.00 * weight) + flat_rate
-  print(cost)
-else:
-  cost = (4.75 * weight) + flat_rate
-  print(cost)
+  # ground shipping
 
+if premium == False and drone == False:
+
+  if weight <= 2:
+    cost_standard = (1.50 * weight) + flat_rate
+  elif weight <= 6:
+    cost_standard = (3.00 * weight) + flat_rate
+  elif weight <= 10:
+    cost_standard = (4.00 * weight) + flat_rate
+  else:
+    cost_standard = (4.75 * weight) + flat_rate
+  print("Standard ground shipping costs: ", round(cost_standard,2),"$")
 # premium group shipping
-
-premium = False
-
-if premium == True:
-  cost = 125.00
-
-
-
-
+elif premium == True and drone == False:
+  cost_premium = 125.00
+  print("Premium ground shipping costs: ", round(cost_premium,2), "$")
+# drone shipping
+elif premium == False and drone == True:
+  if weight <= 2:
+    cost_drone = (4.50 * weight)
+  elif weight <= 6:
+    cost_drone = (9.00 * weight)
+  elif weight <= 10:
+    cost_drone = (12.00 * weight)
+  else:
+    cost_drone = (14.25 * weight)
+  print("Drone shipping costs: ", round(cost_drone,2), "$")
+# all options for comparison (premium and drone == True)
+else:
+  # ground standard for comparison
+  if weight <= 2:
+    cost_standard = (1.50 * weight) + flat_rate
+  elif weight <= 6:
+    cost_standard = (3.00 * weight) + flat_rate
+  elif weight <= 10:
+    cost_standard = (4.00 * weight) + flat_rate
+  else:
+    cost_standard = (4.75 * weight) + flat_rate
+  print("Standard ground shipping costs: ", round(cost_standard,2),"$")
+  # premium ground for comparison
+  cost_premium = 125.00
+  print("Premium ground shipping costs: ", round(cost_premium,2), "$")
+  # drone for comparison
+  if weight <= 2:
+    cost_drone = (4.50 * weight)
+  elif weight <= 6:
+    cost_drone = (9.00 * weight)
+  elif weight <= 10:
+    cost_drone = (12.00 * weight)
+  else:
+    cost_drone = (14.25 * weight)
+  print("Drone shipping costs: ", round(cost_drone,2), "$")
 
 
 
