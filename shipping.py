@@ -18,7 +18,7 @@ cost_standard = 0
 cost_premium = 0
 cost_drone= 0
 
-
+# main functionality
 if premium == False and drone == False:
   # ground shipping
   if weight <= 2:
