@@ -1,6 +1,6 @@
 # program to determine the best package-shipping rate possible
 
-# change weight variable to see options
+# in lbs
 weight = int(input("How much does your package weigh? "))
 
 ''' 
@@ -12,7 +12,7 @@ all options => premium & drone == True
 premium = True
 drone = True
 
-# static variables
+# static variables, CAD
 flat_rate = 20.00
 cost_standard = 0
 cost_premium = 0
