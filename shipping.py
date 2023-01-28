@@ -1,7 +1,7 @@
 # program to determine the best package-shipping rate possible
 
 # change weight variable to see options
-weight = 41.5
+weight = int(input("How much does your package weigh? "))
 
 ''' 
 standard shipping => premium & drone == False
