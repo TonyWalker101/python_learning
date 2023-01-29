@@ -13,3 +13,6 @@ print("We sell ", num_pizzas, " different kinds of pizzas!")
 
 pizza_and_prices = [["pepperoni", 2], ["pineapple", 6], ["cheese", 1], ["sausage", 3], ["olives", 2], ["anchovies", 7], ["mushrooms", 2]]
 
+print(pizza_and_prices)
+
+# print(sorted(pizza_and_prices))
