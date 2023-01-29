@@ -22,5 +22,11 @@ cheapest_pizza = pizza_and_prices[0]
 priciest_pizza = pizza_and_prices[-1]
 
 pizza_and_prices.pop()
-print(pizza_and_prices)
+# print(pizza_and_prices)
 
+pizza_and_prices.append([2.5, "peppers"])
+pizza_and_prices.sort()
+
+three_cheapest = pizza_and_prices[:3]
+
+print(three_cheapest)
