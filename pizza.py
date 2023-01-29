@@ -11,8 +11,10 @@ num_pizzas = len(toppings)
 
 print("We sell ", num_pizzas, " different kinds of pizzas!")
 
-pizza_and_prices = [["pepperoni", 2], ["pineapple", 6], ["cheese", 1], ["sausage", 3], ["olives", 2], ["anchovies", 7], ["mushrooms", 2]]
+pizza_and_prices = [[2, "pepperoni"], [6, "pineapple"], [1, "cheese"], [3, "sausage"], [2, "olives"], [7, "anchovies"], [2, "mushrooms"]]
+
+pizza_and_prices.sort(reverse=True)
 
 print(pizza_and_prices)
 
-# print(sorted(pizza_and_prices))
+# print(sorted(pizza_and_prices, reverse=True))
