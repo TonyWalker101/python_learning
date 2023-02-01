@@ -31,4 +31,12 @@ print(train_force)
 print("The GE train supplies " + str(train_force) + " Newtons of force")
 
 # calculating energy
+def get_energy(mass, c = 3*10**8):
+  return mass * (c**2)
 
+bomb_energy = get_energy(bomb_mass)
+print(bomb_energy)
+
+print("A 1kg bomb supplies " + str(bomb_energy) + " Joules of energy")
+
+# calculating work
