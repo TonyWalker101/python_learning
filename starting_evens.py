@@ -1,13 +1,13 @@
 # program to remove starting even numbers from a list
 
 def delete_starting_evens(lst):
-  for num in lst:
-    if num % 2 == 0:
-      lst.remove(num)
-      print(f'i\'ve removed {num}')
+  answer = []
+  for i in range(0,len(lst)-1):
+    if lst[i] % 2 == 0:
+      i += 1
     else:
-      print(f'I\'m not removing {num}')
-  return lst
+      answer = lst[i:]
+  return answer
 
 #tests
 
