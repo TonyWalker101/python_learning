@@ -1,0 +1,1 @@
+# codewars kata to convert boolean value into string
