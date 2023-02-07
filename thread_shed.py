@@ -107,14 +107,18 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 ;,; green&white&blue   ;,; 09/15/17 , Myrtle Morris 
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
 
-# replacing ;,;
+# replacing ;,; so we can split by "," later
 daily_sales_replaced = daily_sales.replace(";,;",";")
 # print(daily_sales_replaced)
 
-# separating transactions
+# separating all transactions by "," into a list
 daily_transactions = daily_sales_replaced.split(",")
 # print(daily_transactions)
 
-# spliting each individual transaction
+# spliting each individual transaction into a list
 daily_transactions_split = []
 
+for transaction in daily_transactions:
+  daily_transactions_split.append(transaction.split(";"))
+
+# print(daily_transactions_split)
