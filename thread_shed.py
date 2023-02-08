@@ -144,7 +144,14 @@ for transactions in transactions_clean:
   sales.append(transactions[1])
   thread_sold.append(transactions[2])
 
-print("customers: ", customers)
-print("sales: ",sales)
-print("threads sold: ", thread_sold)
+# print("customers: ", customers)
+# print("sales: ",sales)
+# print("threads sold: ", thread_sold)
 
+# converting sales string into float for analysis
+total_sales = 0
+
+for sale in sales:
+  total_sales += float(sale.strip("$"))
+
+# print("total sales: ", total_sales)
