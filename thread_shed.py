@@ -157,7 +157,6 @@ for sale in sales:
 # print("total sales: ", total_sales)
 
 # converts thread types sold 
-
 thread_sold_split = []
 
 for threads in thread_sold:
@@ -168,4 +167,18 @@ for threads in thread_sold:
     thread_sold_split.append(x[0])
     thread_sold_split.append(x[1])
 
-print("threads sold split: ", thread_sold_split)
+# print("threads sold split: ", thread_sold_split)
+
+# counting thread colours
+def colour_count(colour):
+  count = 0
+  for colours in thread_sold_split:
+    if colours == colour:
+      count += 1
+
+  return count
+
+# test: should print 28
+# print(colour_count("white"))
+
+
