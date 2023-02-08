@@ -181,4 +181,7 @@ def colour_count(colour):
 # test: should print 28
 # print(colour_count("white"))
 
+#printing thread counts using format function
+colours = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
 
+print("Threads Sold; Red: {red}, Yellow: {yellow}, Green: {green}, White: {white}, Black: {black}, Purple: {purple}, Blue: {blue}".format(red=colour_count(colours[0]),yellow=colour_count(colours[1]), green=colour_count(colours[2]), white=colour_count(colours[3]), black=colour_count(colours[4]), purple=colour_count(colours[-1]), blue=colour_count(colours[-2])))
