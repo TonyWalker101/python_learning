@@ -155,3 +155,17 @@ for sale in sales:
   total_sales += float(sale.strip("$"))
 
 # print("total sales: ", total_sales)
+
+# converts thread types sold 
+
+thread_sold_split = []
+
+for threads in thread_sold:
+  if threads.find("&") == -1:
+    thread_sold_split.append(threads)
+  else:
+    x = threads.split("&")
+    thread_sold_split.append(x[0])
+    thread_sold_split.append(x[1])
+
+print("threads sold split: ", thread_sold_split)
