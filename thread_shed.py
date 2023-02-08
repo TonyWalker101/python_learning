@@ -134,3 +134,17 @@ for transactions in daily_transactions_split:
 
 # print(transactions_clean)
 
+# adding transaction list data to specific list
+customers = []
+sales = []
+thread_sold = []
+
+for transactions in transactions_clean:
+  customers.append(transactions[0])
+  sales.append(transactions[1])
+  thread_sold.append(transactions[2])
+
+print("customers: ", customers)
+print("sales: ",sales)
+print("threads sold: ", thread_sold)
+
