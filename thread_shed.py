@@ -122,3 +122,15 @@ for transaction in daily_transactions:
   daily_transactions_split.append(transaction.split(";"))
 
 # print(daily_transactions_split)
+
+# removes white spaces in each transaction list
+transactions_clean = []
+
+for transactions in daily_transactions_split:
+  x = []
+  for transaction in transactions:
+    x.append(transaction.strip())
+  transactions_clean.append(x)
+
+# print(transactions_clean)
+
