@@ -1,9 +1,14 @@
 # solution to a "finding a needle in a haystack" problem
 
+# previous solution
+
+# def find_needle(haystack):
+#   for i in range(0, len(haystack)):
+#     if haystack[i] == 'needle':
+#       return 'found the needle at position {i}'.format(i=i)
+
 def find_needle(haystack):
-  for i in range(0, len(haystack)):
-    if haystack[i] == 'needle':
-      return 'found the needle at position {i}'.format(i=i)
+  return f"found the needle at index {haystack.index('needle')}"
 
 # tests
 
