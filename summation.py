@@ -1,11 +1,7 @@
 # program to find sum of numbers up to the given number
 
 def summation(num):
-  answer = 0
-  while num >= 1:
-    answer += num
-    num -= 1
-  return answer
+  return sum(range(num+1))
 
 #tests
 
