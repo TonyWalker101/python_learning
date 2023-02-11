@@ -1,11 +1,10 @@
 # program to find sum of numbers up to the given number
 
 def summation(num):
-  start = 1
   answer = 0
-  while start < num:
-    answer += start
-    start += 1
+  while num >= 1:
+    answer += num
+    num -= 1
   return answer
 
 #tests
@@ -14,5 +13,7 @@ def summation(num):
 print(summation(1))
 #should return 36
 print(summation(8))
-#should return 256
+#should return 253
 print(summation(22))
+#should return 5050
+print(summation(100))
