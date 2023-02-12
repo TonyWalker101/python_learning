@@ -1,4 +1,4 @@
-# tarot generating program
+# tarot generating program using numpy module
 
 #for random num generation
 import numpy as np
@@ -11,7 +11,9 @@ cards_left = list(tarot.keys())
 
 #for each choice, numpy will select a random num from the available cards in tarot
 spread["past"] = tarot.pop(np.random.choice(cards_left))
+cards_left = list(tarot.keys())
 spread["present"] = tarot.pop(np.random.choice(cards_left))
+cards_left = list(tarot.keys())
 spread["future"] = tarot.pop(np.random.choice(cards_left))
 
 # final results
