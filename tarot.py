@@ -8,9 +8,9 @@ tarot = { 1:	"The Magician", 2:	"The High Priestess", 3:	"The Empress", 4:	"The 
 your_future = {"past": "", "present": "", "future": ""}
 
 for prediction in your_future.keys():
-#available cards left in the tarot deck
+  #available cards left in the tarot deck
   cards_left = list(tarot.keys())
-#for each prediction, numpy will select a random num from the available cards in tarot
+  #for each prediction, numpy will select a random num from the available cards in tarot
   your_future[prediction] = tarot.pop(np.random.choice(cards_left))
 
 #final results
