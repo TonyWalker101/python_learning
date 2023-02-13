@@ -49,12 +49,18 @@ def update_point_total():
 #function for adding words to player's list
 def play_word(player, word):
   player_to_words[player].append(word)
-  print(f'Adding {word} to {player}\'s list...')
+  # print(f'Adding {word} to {player}\'s list...')
   return
 
 #play_word function test, should add word to player1 list
-print(player_to_words)
-print(update_point_total())
-play_word("player1", "Test")
-print(player_to_words)
-print(update_point_total())
+# print(player_to_words)
+# play_word("player1", "Test")
+# print(player_to_words)
+
+#final output
+print("Word lists so far:\n", player_to_words)
+print("Point totals so far:\n", update_point_total())
+print("player1 spells the word 'Amazing'")
+play_word("player1", "Amazing")
+print("Updated word lists:\n", player_to_words)
+print("Updated totals:\n", update_point_total())
