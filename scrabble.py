@@ -23,4 +23,22 @@ def score_word(word):
 brownie_points = score_word("BROWNIE")
 # print(brownie_points)
 
+#scrabble players and the words they've played
+player_to_words = {
+  "player1": ["BLUE", "TENNIS", "EXIT"],
+  "wordNerd": ["EARTH", "EYES", "MACHINE"],
+  "LexiCon": ["ERASER", "BELLY", "HUSKY"],
+  "ProfReader": ["ZAP", "COMA", "PERIOD"]
+}
 
+#calculating player_to_words score
+player_to_points = {}
+
+for words in player_to_words:
+  player_points = 0
+  for word in words:
+    player_points += score_word(word)
+  player_to_points[words] = player_points
+
+#test, wordNerd should be up 1 point
+# print(player_to_points)
