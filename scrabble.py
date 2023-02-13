@@ -34,11 +34,11 @@ player_to_words = {
 #calculating player_to_words score
 player_to_points = {}
 
-for words in player_to_words:
+for player, words in player_to_words.items():
   player_points = 0
   for word in words:
     player_points += score_word(word)
-  player_to_points[words] = player_points
+  player_to_points[player] = player_points
 
 #test, wordNerd should be up 1 point
-# print(player_to_points)
+print(player_to_points)
