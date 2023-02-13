@@ -10,4 +10,17 @@ letter_to_points = {letters:points for letters, points in zip(letters, points)}
 
 #adding blank values to letters_to_points dict
 letter_to_points[" "] = 0
-print(letter_to_points)
+# print(letter_to_points)
+
+#function for determining letter's points
+def score_word(word):
+  point_total = 0
+  for letter in word:
+    point_total += letter_to_points.get(letter, 0)
+  return point_total
+
+#testing score_word function, should return 15
+brownie_points = score_word("BROWNIE")
+# print(brownie_points)
+
+
