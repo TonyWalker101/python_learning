@@ -31,14 +31,27 @@ player_to_words = {
   "ProfReader": ["ZAP", "COMA", "PERIOD"]
 }
 
-#calculating player_to_words score
-player_to_points = {}
+#function for calculating player_to_words score
+def update_point_total():
+  player_to_points = {}
 
-for player, words in player_to_words.items():
-  player_points = 0
-  for word in words:
-    player_points += score_word(word)
-  player_to_points[player] = player_points
+  for player, words in player_to_words.items():
+    player_points = 0
+    for word in words:
+      player_points += score_word(word)
+    player_to_points[player] = player_points
+  return player_to_points
 
 #test, wordNerd should be up 1 point
-print(player_to_points)
+# print(update_point_total())
+
+#function for adding words to player's list
+def play_word(player, word):
+  player_to_words[player].append(word)
+  print(f'Adding {word} to {player}\'s list...')
+  return
+
+#play_word function test, should add "TEST" to player1 list
+# print(update_point_total())
+# play_word("player1", "TEST")
+# print(update_point_total())
