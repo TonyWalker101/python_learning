@@ -16,11 +16,12 @@ letter_to_points[" "] = 0
 def score_word(word):
   point_total = 0
   for letter in word:
-    point_total += letter_to_points.get(letter, 0)
+    upper_letter = letter.upper()
+    point_total += letter_to_points.get(upper_letter, 0)
   return point_total
 
 #testing score_word function, should return 15
-brownie_points = score_word("BROWNIE")
+# brownie_points = score_word("BrowniE")
 # print(brownie_points)
 
 #scrabble players and the words they've played
@@ -51,7 +52,9 @@ def play_word(player, word):
   print(f'Adding {word} to {player}\'s list...')
   return
 
-#play_word function test, should add "TEST" to player1 list
-# print(update_point_total())
-# play_word("player1", "TEST")
-# print(update_point_total())
+#play_word function test, should add word to player1 list
+print(player_to_words)
+print(update_point_total())
+play_word("player1", "Test")
+print(player_to_words)
+print(update_point_total())
