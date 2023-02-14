@@ -1,0 +1,1 @@
+# function that returns a list of the first n multiples of x
