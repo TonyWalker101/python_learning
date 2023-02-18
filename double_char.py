@@ -1,10 +1,17 @@
-# program to return a string w/ duplicate letters
+#program to return a string w/ duplicate letters
+
+#original solution
+
+# def double_char(s):
+#   answer = ""
+#   for letter in s:
+#     answer += letter*2
+#   return answer
+
+#refactored solution
 
 def double_char(s):
-  answer = ""
-  for letter in s:
-    answer += letter*2
-  return answer
+  return "".join(letter*2 for letter in s)
 
 #tests
 
