@@ -1,11 +1,16 @@
 #program to update traffic lights to next option
 
+#original solution
+# def update_light(current):
+#   if current == "green":
+#     return "yellow"
+#   elif current =="yellow":
+#     return "red"
+#   return "green"
+
+#refactored solution
 def update_light(current):
-  if current == "green":
-    return "yellow"
-  elif current =="yellow":
-    return "red"
-  return "green"
+  return {"green": "yellow", "yellow": "red", "red": "green"}[current]
 
 #tests
 
