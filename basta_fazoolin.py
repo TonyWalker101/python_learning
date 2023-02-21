@@ -35,6 +35,11 @@ class Franchise:
         available_menus.append(menu)
     return available_menus
 
+class Business:
+  def __init__(self, name, franchises):
+    self.name = name
+    self.franchises = franchises
+
 
 #creating Menus
 brunch = Menu("Brunch", {
@@ -50,7 +55,7 @@ kids = Menu("Kids", {
   'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00}, time(11), time(21))
 
 #testing repr Menu method
-print(brunch)
+# print(brunch)
 
 #testing calculate_bill() method
 # print("Brunch total: $", brunch.calculate_bill(["pancakes", "home fries", "coffee"]))
@@ -62,8 +67,11 @@ flagship_store = Franchise("1232 West End Road", [brunch, early_bird, dinner, ki
 new_installment = Franchise("12 East Mulberry Street", [brunch, early_bird, dinner, kids])
 
 #testing repr Franchise method
-print(flagship_store)
+# print(flagship_store)
 
 #testing available_menus() method
-print(flagship_store.available_menus("12:00"))
-print(flagship_store.available_menus("17:00"))
+# print(flagship_store.available_menus("12:00"))
+# print(flagship_store.available_menus("17:00"))
+
+#creating Businesses
+first_business = Business("Basta Fazoolin' with my Heart", [flagship_store, new_installment])
