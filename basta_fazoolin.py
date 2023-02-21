@@ -6,6 +6,9 @@ class Menu:
     self.items = items
     self.start_time = start_time
     self.end_time = end_time
+  
+  def __repr__(self):
+    return f"The {self.name} menu is available from {self.start_time} to {self.end_time}."
 
 #creating Menus
 brunch = Menu("Brunch", {
@@ -20,4 +23,5 @@ dinner = Menu("Dinner", {
 kids = Menu("Kids", {
   'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00}, "11:00", "21:00")
 
-
+#testing repr Menu method
+print(brunch)
