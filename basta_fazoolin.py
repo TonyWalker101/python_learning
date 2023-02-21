@@ -9,6 +9,12 @@ class Menu:
   
   def __repr__(self):
     return f"The {self.name} menu is available from {self.start_time} to {self.end_time}."
+  
+  def calculate_bill(self, purchased_items):
+    total = 0
+    for item in purchased_items:
+      total += self.items.get(item)
+    return total
 
 #creating Menus
 brunch = Menu("Brunch", {
@@ -25,3 +31,6 @@ kids = Menu("Kids", {
 
 #testing repr Menu method
 print(brunch)
+
+#testing calculate_bill() method
+print("Brunch total: $", brunch.calculate_bill(["pancakes", "home fries", "coffee"]))
