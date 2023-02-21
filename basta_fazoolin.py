@@ -10,11 +10,18 @@ class Menu:
   def __repr__(self):
     return f"The {self.name} menu is available from {self.start_time} to {self.end_time}."
   
+  #purchased_items must be a list
   def calculate_bill(self, purchased_items):
     total = 0
     for item in purchased_items:
       total += self.items.get(item)
     return total
+
+class Franchise: 
+  def __init__(self, address, menus):
+    self.address = address
+    self.menus = menus
+
 
 #creating Menus
 brunch = Menu("Brunch", {
@@ -34,3 +41,6 @@ print(brunch)
 
 #testing calculate_bill() method
 print("Brunch total: $", brunch.calculate_bill(["pancakes", "home fries", "coffee"]))
+
+print("Early Bird total: $", early_bird.calculate_bill(["salumeria plate", "mushroom ravioli (vegan)"]))
+
