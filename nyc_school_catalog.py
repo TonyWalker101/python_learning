@@ -39,15 +39,17 @@ class School():
 
 class PrimarySchool(School):
   def __init__(self, name, number_of_students, pickup_policy):
-    super().__init__(self, name, number_of_students, level="primary")
+    super().__init__(name, "primary", number_of_students)
     self.pickup_policy = pickup_policy
   
   def get_pickup_policy(self):
     return self.pickup_policy
   
   def __repr__(self):
-    super().__repr__(self)
-    return f" and the pick up policy is {self.pickup_policy}"
+    return super().__repr__() + f" and the pick up policy is {self.pickup_policy}"
 
 #testing PrimarySchool class
-  
+# primary_school = PrimarySchool("Great School", 150, "before 4 pm")
+# print(primary_school)
+# print(primary_school.get_pickup_policy())
+# print(primary_school.get_name())
