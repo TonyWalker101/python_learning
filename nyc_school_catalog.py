@@ -53,3 +53,15 @@ class PrimarySchool(School):
 # print(primary_school)
 # print(primary_school.get_pickup_policy())
 # print(primary_school.get_name())
+
+class HighSchool(School):
+  def __init__(self, name, number_of_students, sports_teams):
+    super().__init__(name, "high school", number_of_students)
+    self.sports_teams = sports_teams
+  
+  def get_sports_teams(self):
+    return self.sports_teams
+  
+  def __repr__(self):
+    return super().__repr__() + f" that has the following sports teams: {self.sports_teams}"
+  
