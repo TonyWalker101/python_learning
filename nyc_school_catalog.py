@@ -16,10 +16,38 @@ class School():
     return self.number_of_students
   
   def set_number_of_students(self, new_number):
-    if int(new_number):
+    if isinstance(new_number, int):
       self.number_of_students = new_number
+      return
+    else:
+      return TypeError
   
   def __repr__(self):
     return f"A {self.level} school named {self.name} with {self.number_of_students} students"
 
 #testing School class
+
+# willingdon = School("Willingdon", "primary", 200)
+# print(willingdon)
+# print(willingdon.get_name())
+# print(willingdon.get_level())
+# print(willingdon.get_number_of_students())
+# willingdon.set_number_of_students(250)
+# print(willingdon.set_number_of_students("Two Hundred and Fifty"))
+# print(willingdon.get_number_of_students())
+# print(willingdon)
+
+class PrimarySchool(School):
+  def __init__(self, name, number_of_students, pickup_policy):
+    super().__init__(self, name, number_of_students, level="primary")
+    self.pickup_policy = pickup_policy
+  
+  def get_pickup_policy(self):
+    return self.pickup_policy
+  
+  def __repr__(self):
+    super().__repr__(self)
+    return f" and the pick up policy is {self.pickup_policy}"
+
+#testing PrimarySchool class
+  
