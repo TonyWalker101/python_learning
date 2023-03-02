@@ -56,7 +56,7 @@ class PrimarySchool(School):
 
 class HighSchool(School):
   def __init__(self, name, number_of_students, sports_teams):
-    super().__init__(name, "high school", number_of_students)
+    super().__init__(name, "high", number_of_students)
     self.sports_teams = sports_teams
   
   def get_sports_teams(self):
@@ -65,3 +65,7 @@ class HighSchool(School):
   def __repr__(self):
     return super().__repr__() + f" that has the following sports teams: {self.sports_teams}"
   
+#testing HighSchool class
+# royalvale = HighSchool("Royal Vale", 500, ["Basketball", "Squash", "Soccer"])
+# print(royalvale)
+# print(royalvale.get_sports_teams())
