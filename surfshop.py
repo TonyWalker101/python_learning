@@ -16,7 +16,7 @@ class ShoppingCart:
 
     def add_surfboards(self, quantity=1):
         if self.num_surfboards + quantity > 4:
-            raise TooManyBoardsError
+            raise TooManyBoardsError('Cart cannot have more than 4 surfboards in it!')
         else:
             self.num_surfboards += quantity
             suffix = '' if quantity == 1 else 's'
@@ -29,4 +29,5 @@ class ShoppingCart:
             self.checkout_date = date
 
     def apply_locals_discount(self):
-        pass
+        self.locals_discount = True
+        return self.locals_discount
