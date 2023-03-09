@@ -1,4 +1,6 @@
 #program to practice python iterator protocol manipulation
+
+#section 2
 import itertools
 
 student_roster = [
@@ -92,36 +94,59 @@ class ClassroomOrganizer:
         selected_students.append((student['name'], subject))
     return selected_students
   
+  #section 3
   def __iter__(self):
     self.index = 0
     return self
   
+  #section 3
   def __next__(self):
     if self.index >= len(self.sorted_names):
       raise StopIteration
     print(f"Good morning {self.sorted_names[self.index]}!")
     self.index += 1
   
+  #section 4
   def classroom_pairings(self):
     classroom_pairings = itertools.combinations(self.sorted_names, 2)
     return list(classroom_pairings) 
   
+  #section 5
   def afterschool_program(self):
     list_of_students = itertools.chain(self.get_students_with_subject("Math"), self.get_students_with_subject("Science"))
     afterschool_program_students = itertools.combinations(list_of_students, 4)
     return list(afterschool_program_students)
 
 #section 1
-
 # student_roster_iterator = student_roster.__iter__()
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
+# print(student_roster_iterator.__next__())
 
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
-# print(student_roster_iterator.__next__())
+classroom = ClassroomOrganizer()
+
+#section 3
+# classroom_iterator = classroom.__iter__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+# classroom_iterator.__next__()
+
+#section 4 
+# print(classroom.classroom_pairings())
+
+#section 5
+print(classroom.afterschool_program())
