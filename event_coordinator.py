@@ -12,3 +12,14 @@ def read_guestlist(file_name):
     name = line_data[0]
     age = int(line_data[1])
     guests[name] = age
+    yield name
+
+guestlist = read_guestlist("guests_for_event_coordinator_py.txt")
+#section 1
+for i in range(10):
+  print(next(guestlist))
+
+#section 2
+guestlist.send("Jane, 35")
+
+#section 3
