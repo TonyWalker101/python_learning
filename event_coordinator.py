@@ -43,3 +43,59 @@ guests_over_21 = (name for name in guests if guests[name] >= 21)
 
 for guest in guests_over_21:
   print(guest)
+
+#section 5
+def table_1():
+  for i in range(1,6):
+    yield ("Chicken", "Table 1", f"Seat {i}")
+
+def table_2():
+  for i in range(1,6):
+    yield ("Beef", "Table 2", f"Seat {i}")
+
+def table_3():
+  for i in range(1,6):
+    yield ("Fish", "Table 3", f"Seat {i}")
+
+chicken_table = table_1()
+beef_table = table_2()
+fish_table = table_3()
+
+for seat in chicken_table:
+  print(seat)
+
+for seat in beef_table:
+  print(seat)
+
+for seat in fish_table:
+  print(seat)
+
+#section 6
+def guest_to_table(guests_list, table_1_list, table_2_list, table_3_list):
+  guests = iter(guests_list)
+  tables_1 = table_1_list()
+  tables_2 = table_2_list()
+  tables_3 = table_3_list()
+
+  for table in tables_1:
+    try:
+      yield (f"{next(guests)}", table)
+    except:
+      continue
+
+  for table in tables_2:
+    try:
+      yield (f"{next(guests)}", table)
+    except: 
+      continue
+
+  for table in tables_3:
+    try:
+      yield (f"{next(guests)}", table)
+    except:
+      continue
+
+tables_to_guests = guest_to_table(guests, table_1, table_2, table_3)
+
+for table_combo in tables_to_guests:
+  print(table_combo)
