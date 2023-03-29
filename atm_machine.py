@@ -48,7 +48,7 @@ class BankAccount:
       print("Error! You entered a non-number value to deposit.")
       print("Transaction Info:")
       print("Status: Failed")
-      print("Transaction #{number}".format(number))
+      print("Transaction #{number}".format(number=tran_number))
       logger.error("User entered a non-number value to deposit. Transaction #{tran_number}".format(tran_number=tran_number))
  
   def withdraw(self):
