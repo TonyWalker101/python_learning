@@ -15,10 +15,9 @@ def cal_average(num):  # Average function used for sequential programming, threa
 
 def main_sequential(list1, list2, list3):  # Main wrapper for sequential example
   s = time.perf_counter()
-  # your code goes here
 
-
-
+  lists_avg = (cal_average(list1) + cal_average(list2) + cal_average(list3)) / 3
+  
   elapsed = time.perf_counter() - s
   print("Sequential Programming Elapsed Time: " + str(elapsed) + " seconds")
 
@@ -32,27 +31,43 @@ async def cal_average_async(num):  # Average function used for asynchronous prog
 
 async def main_async(list1, list2, list3):  # Main wrapper for asynchronous example
   s = time.perf_counter()
-  # your code goes here
 
-
+  tasks = [cal_average_async(list1), cal_average_async(list2), cal_average_async(list3)]
+  list_total = await asyncio.gather(*tasks)
+  sum(list_total) / 3
 
   elapsed = time.perf_counter() - s
   print("Asynchronous Programming Elapsed Time: " + str(elapsed) + " seconds")
 
 def main_threading(list1, list2, list3):  # Main wrapper for threading example
   s = time.perf_counter()
-  # your code goes here
 
+  lists = [list1, list2, list3]
+  threads = []
 
+  for i in range(len(lists)):
+    t = threading.Thread(target=cal_average, args=(lists[i],))
+    threads.append(t)
+    t.start()
+  
+  for thread in threads:
+    thread.join()
 
   elapsed = time.perf_counter() - s
   print("Threading Elapsed Time: " + str(elapsed) + " seconds")
 
 def main_multiprocessing(list1, list2, list3):  # Main wrapper for multiprocessing example
   s = time.perf_counter()
-  # your code goes here
 
+  lists = [list1, list2, list3]
 
+  processes = [Process(target=cal_average, args=(lists[i],)) for i in range(len(lists))]
+
+  for p in processes:
+    p.start()
+  
+  for p in processes:
+    p.join()
 
   elapsed = time.perf_counter() - s
   print("Multiprocessing Elapsed Time: " + str(elapsed) + " seconds")
