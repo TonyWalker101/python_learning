@@ -1,12 +1,10 @@
 #program to return smallest int in list
 
 def find_smallest_int(arr):
-  # Code here
   answer = arr[0]
   for i in range(1,len(arr)):
       if arr[i] <= answer:
           answer = arr[i]
-          
   return answer
 
 #tests
