@@ -1,4 +1,4 @@
-#kata to sum int 
+#kata to sum int
 
 def sum(arr):
   answer = 0
