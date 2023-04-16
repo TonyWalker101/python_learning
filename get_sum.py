@@ -18,3 +18,10 @@ def get_sum(a,b):
       answer += x
       
   return answer
+
+#tests
+
+#should print 1
+print(get_sum(0,1))
+#should print -1
+print(get_sum(0,-1))
