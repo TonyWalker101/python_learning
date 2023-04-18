@@ -1,0 +1,1 @@
+#kata to practice array manipulation
