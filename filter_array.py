@@ -1,13 +1,19 @@
 #kata to find and return number from a string
 
 def filter_string(string):
-  answer = ""
+  # answer = ""
 
-  for letter in string:
-    if isinstance( int(letter),(int,float)):
-      answer += letter
+  # for letter in string:
+    
+  #   try:
+  #     if isinstance(int(letter),(int,float)):
+  #       answer += letter
+  #   except:
+  #     continue
+        
+  # return int(answer)
   
-  return int(answer)
+  return int("".join(filter(str.isdigit, string)))
 
 #tests
 
