@@ -5,16 +5,17 @@ def explode(arr):
   score = 0
   first_ele = arr[0]
   second_ele = arr[1]
+   
   if isinstance(first_ele, (int,float)) and isinstance(second_ele, (int,float)):
       score = first_ele + second_ele
-  elif not isinstance(first_ele, (int,float)) and isinstance(second_ele, (int,float)):
+  elif not isinstance(first_ele, (int,float)) and not isinstance(second_ele, (int,float)):
       return 'Void!'
   elif isinstance(first_ele, (int,float)):
       score = first_ele
   else:
       score = second_ele
 
-  for i in range(score+1):
+  for i in range(0, score):
       answer.append([arr])
   
   return answer
