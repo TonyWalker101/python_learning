@@ -18,3 +18,18 @@ def explode(arr):
       answer.append([arr])
   
   return answer
+
+#tests
+
+#should print [[9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3]]
+print(explode([9, 3]))
+#should print [['a', 3], ['a', 3], ['a', 3]] 
+print(explode(['a', 3])) 
+#should print [[6, 'c'], [6, 'c'], [6, 'c'], [6, 'c'], [6, 'c'], [6, 'c']]
+print(explode([6, 'c'])) 
+#should print 'Void!'
+print(explode(['a', 'b'])) 
+#should print [[1,0]]
+print(explode([1, 0])) 
+#should print []
+print(explode(["a", 0]))
