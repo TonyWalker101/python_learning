@@ -5,7 +5,7 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order.'''
 
 class Solution:
-  def twoSum(self, nums: List[int], target: int) -> List[int]:
+  def twoSum(self, nums, target):
       answers = []
       for x in range(len(nums)):
           for y in range(x+1, len(nums)):
