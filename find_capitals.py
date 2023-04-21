@@ -1,0 +1,1 @@
+#kata to find the capitals in a given string
