@@ -1,13 +1,9 @@
 #kata to find the capitals in a given string
 def capitals(word):
-  # answer = []
-  # def find_index(lst, lst2):
-  #   for x in lst:
-  #     answer.
+  def find_index(lst):
+    return word.index(lst)
 
-  answer_list = filter(lambda x: x.upper() == x, word)
-  # answer_map = map(lambda x: for x in answer_list, answer_list)
-  return list(answer_list)
+  return list(map(find_index, filter(lambda x: x.upper() == x, word)))
 
 #tests
 
