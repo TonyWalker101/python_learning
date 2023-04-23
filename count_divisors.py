@@ -1,7 +1,12 @@
 #kata to count the # of divisors for a given num
 
 def divisors(num):
-  pass
+  answer = 0
+  for x in range(1, num+1):
+    if num % x == 0:
+      answer += 1
+  
+  return answer
 
 #tests
 
