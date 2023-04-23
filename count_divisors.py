@@ -1,12 +1,15 @@
 #kata to count the # of divisors for a given num
 
 def divisors(num):
-  answer = 0
-  for x in range(1, num+1):
-    if num % x == 0:
-      answer += 1
+  # answer = 0
+  # for x in range(1, num+1):
+  #   if num % x == 0:
+  #     answer += 1
   
-  return answer
+  # return answer
+
+  #refactored solution
+  return len([x for x in range(1, num+1) if num % x == 0])
 
 #tests
 
