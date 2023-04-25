@@ -1,0 +1,1 @@
+#kata to see if numbers in array are lower than given num
