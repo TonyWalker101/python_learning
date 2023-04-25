@@ -1,7 +1,11 @@
 #kata to see if numbers in array are lower than given num
 
 def small_enough(array, limit):
-  pass
+  for x in array:
+    if x > limit:
+      return False
+    
+  return True
 
 #tests
 
