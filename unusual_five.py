@@ -1,0 +1,1 @@
+#function that always returns 5 but without using int or number characters
