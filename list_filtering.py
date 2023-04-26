@@ -1,0 +1,1 @@
+#kata to remove the strings from a given list
