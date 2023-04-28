@@ -1,12 +1,14 @@
 #kata to return largest possible divisor given two nums
 
 def max_multiple(x,y):
-  answer = []
-  for i in range(1, y+1):
-    if i % x == 0:
-      answer.append(i)
+  # answer = []
+  # for i in range(1, y+1):
+  #   if i % x == 0:
+  #     answer.append(i)
   
-  return max(answer)
+  # return max(answer)
+  
+  return y - (y % x)
 
 #tests
 
