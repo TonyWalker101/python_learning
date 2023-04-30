@@ -3,7 +3,7 @@
 def reverse_letter(string):
   answer = ""
   for i in range(len(string)-1, -1, -1):
-    if not isinstance(string[i], (int, float)):  
+    if string[i].isalpha():  
       answer += string[i]
       
   return answer
