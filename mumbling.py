@@ -1,7 +1,15 @@
 #kata to emulate mumbling via string manipulation
 
 def accum(word):
-  pass
+  length = len(word)
+  answer = ""
+  for i in range(length):
+    mumble_to_add = word[i] * (i + 1)
+    answer += mumble_to_add.title()
+    if i < length-1:
+      answer += "-"
+
+  return answer
 
 #tests
 
