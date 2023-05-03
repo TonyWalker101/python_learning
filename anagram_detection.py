@@ -1,7 +1,9 @@
 #kata to see if one word is an anagram of the other (https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train/python)
 
 def is_anagram(test, original):
-  test_word = test.upper()
+  #solution below doesn't work! Fails on one of the tests. Use refactored solution instead
+
+  '''test_word = test.upper()
   if len(test) != len(original):
       return False
   for i in original:
@@ -11,7 +13,12 @@ def is_anagram(test, original):
       else:
           test_word.replace(i,"",1)
               
-  return True
+  return True'''
+
+  #refactored solution
+  return sorted(test.lower()) == sorted(original.lower())
+
+
 
 #should print True
 print(is_anagram("foefet", "toffee"))
