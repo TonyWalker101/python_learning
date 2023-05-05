@@ -1,7 +1,14 @@
 #codewars kata => https://www.codewars.com/kata/56541980fa08ab47a0000040/train/python
 
-def printer_error(str):
-  pass
+def printer_error(string):
+  numerator = 0
+  denominator = len(string)
+  
+  for x in string:
+    if ord(x) not in range(ord("a"), ord("m")+1):
+      numerator += 1
+  
+  return f"{numerator}/{denominator}"
 
 #tests
 
