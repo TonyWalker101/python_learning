@@ -2,18 +2,24 @@
 
 def longest(a1, a2):
   
-  def count_letters(*args):
-    results = []
+  #original solution
 
-    for word in args:
-      for letter in word:
-        if letter not in results:
-          results.append(letter)
+  # def count_letters(*args):
+  #   results = []
 
-    results.sort()
-    return results
+  #   for word in args:
+  #     for letter in word:
+  #       if letter not in results:
+  #         results.append(letter)
 
-  return "".join(count_letters(a1,a2))
+  #   results.sort()
+  #   return results
+
+  # return "".join(count_letters(a1,a2))
+
+  #refactored solution
+  return "".join(sorted(set(a1+a2)))
+
 
 #tests
 
