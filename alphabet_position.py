@@ -1,7 +1,14 @@
 # codewars kata => https://www.codewars.com/kata/546f922b54af40e1e90001da/train/python
 
 def alphabet_position(text):
-  pass
+  results = ""
+
+  for letter in text:
+    if isinstance(letter, str):
+      results = results + str(ord(letter)) + " "
+    
+  return results
+
 
 #tests
 
