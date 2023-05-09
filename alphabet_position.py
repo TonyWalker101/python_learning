@@ -4,8 +4,8 @@ def alphabet_position(text):
   results = ""
 
   for letter in text:
-    if isinstance(letter, str):
-      results = results + str(ord(letter)) + " "
+    if letter.isalpha():
+      results = results + str(ord(letter.lower()) - 96) + " "
     
   return results
 
