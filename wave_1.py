@@ -1,6 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/python
 
-def wave(people):
+#original solution
+'''def wave(people):
   results = []
 
   if not len(people):
@@ -13,7 +14,11 @@ def wave(people):
     wave_word += people[:x] + people[x].upper() + people[x+1:]
     results.append(wave_word)
   
-  return results
+  return results'''
+
+#refactored solution
+def wave(string):
+  return [string[:i] + string[i].upper() + string[i+1:] for i in range(len(string)) if string[i].isalpha()]
 
 
 #tests
