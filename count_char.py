@@ -4,6 +4,14 @@ def count(s):
   results = {}
   if not s:
     return results
+  
+  for letter in s:
+    if letter not in results:
+      results.update({letter: 1})
+    else:
+      results[letter] += 1
+  
+  return results
 
 #tests
 
