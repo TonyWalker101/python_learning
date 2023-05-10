@@ -1,7 +1,20 @@
 #codewars kata => https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/python
 
 def wave(people):
-  pass
+  results = []
+
+  if not len(people):
+    return results
+  
+  for x in range(len(people)):
+    if people[x] == " ":
+      continue
+    wave_word = ""
+    wave_word += people[:x] + people[x].upper() + people[x+1:]
+    results.append(wave_word)
+  
+  return results
+
 
 #tests
 
@@ -11,3 +24,5 @@ print(wave("hello"))
 print(wave("codewars"))
 #should print []
 print(wave(""))
+#should print["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
+print(wave("two words"))
