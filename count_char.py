@@ -1,6 +1,8 @@
 # codewares kata => https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/python
 
-def count(s):
+#original solution
+
+''' def count(s):
   results = {}
   if not s:
     return results
@@ -11,7 +13,12 @@ def count(s):
     else:
       results[letter] += 1
   
-  return results
+  return results'''
+
+#refactored solution
+
+def count(s):
+  return {i: s.count(i) for i in s}
 
 #tests
 
