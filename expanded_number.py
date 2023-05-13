@@ -11,13 +11,13 @@ def expanded_form(num):
       results.append(string_num[i])
       continue
     else:
-      num_to_add = string_num[i]
-      count = i
-      while count > 0:
-        num_to_add += "0"
-        count -= 1
-      results.append(num_to_add)
-      # results.append(string_num[i] + str(0 * i))
+      # num_to_add = string_num[i]
+      # count = i
+      # while count > 0:
+      #   num_to_add += "0"
+      #   count -= 1
+      # results.append(num_to_add)
+      results.append(string_num[i] + ("0" * i))
   
   # results.reverse()
 
