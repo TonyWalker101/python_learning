@@ -1,29 +1,15 @@
 # codewars kata => https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/python
 
 def expanded_form(num):
-  string_num = str(num)
-  results = []
+  string = list()
+  length = len(str(num)) - 1
 
-  for i in range(len(string_num)):
-    if string_num[i] == 0:
-      continue
-    elif i == 1:
-      results.append(string_num[i])
-      continue
-    else:
-      # num_to_add = string_num[i]
-      # count = i
-      # while count > 0:
-      #   num_to_add += "0"
-      #   count -= 1
-      # results.append(num_to_add)
-      results.append(string_num[i] + ("0" * i))
+  for char in str(num):
+    if char != "0":
+      string.append(char + length * "0")
+      length -= 1
   
-  # results.reverse()
-
-  return " + ".join(results)
-      
-
+  return " + ".join(string)
 
 #tests
 
