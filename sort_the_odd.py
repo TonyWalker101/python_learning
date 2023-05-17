@@ -2,8 +2,7 @@
 
 def sort_array(source_array):
   results = []
-  odd_numbers = list(filter(lambda x: x % 2 != 0, source_array))
-  odd_numbers.sort()
+  odd_numbers = sorted(list(filter(lambda x: x % 2 != 0, source_array)))
   count = 0
 
   for num in source_array:
