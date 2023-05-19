@@ -7,14 +7,12 @@ def high(x):
   
   #calculates score of each word
   for word in string_list:
-    total = 0
-    for letter in word:
-      total += ord(letter.lower()) - 96
+    total = sum([ord(letter) - 96 for letter in word])
     results.append(total)
   
   #gets index of max scoring word
   max_score = results.index(max(results))
-  
+
   return string_list[max_score]
       
 
