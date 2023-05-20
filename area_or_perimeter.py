@@ -1,4 +1,4 @@
-#codewars kata => https://www.codewars.com/kata/620e839683ba7e003ea49757
+#codewars kata (converted to python) => https://www.codewars.com/kata/620e839683ba7e003ea49757
 
 def calc_shape(x):
   width = x[0]
