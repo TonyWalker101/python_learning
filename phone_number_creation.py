@@ -1,31 +1,37 @@
 #codewars kata => https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/python
 
 def create_phone_number(n):
-  results = "("
+
+  #original solution
+
+  ''' phone_number = "("
   count = 0
 
   def add_to_phone_number():
-    nonlocal results
+    nonlocal phone_number
     nonlocal count
-    
-    results += str(n[count])
+
+    phone_number += str(n[count])
     count += 1
     return
 
   while count < 3:
     add_to_phone_number()
   
-  results += ") "
+  phone_number += ") "
 
   while count < 6:
     add_to_phone_number()
   
-  results += "-"
+  phone_number += "-"
 
   while count < len(n):
     add_to_phone_number()
   
-  return results
+  return phone_number'''
+
+  #refactored solution
+  return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
 
 #tests
 
