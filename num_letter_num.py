@@ -2,19 +2,26 @@
 
 def numbers_of_letters(n):
   list_num = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-  results = []
-  pre_total = ""
+  wordify = lambda n: "".join(list_num[int(letter)] for letter in str(n))
+  results = [wordify(n)]
+
+  while results[-1] != "four":
+    results.append(wordify(len(results[-1])))
+
+  return results
+
+  '''pre_total = ""
 
   #step 1: converting initial arg to 'written number'
   for digit in str(n):
     pre_total += list_num[int(digit)]
-    
+
   results.append(pre_total)
 
   #step 2: filling 2nd element in results list
   results.append(list_num[len(results[0])])
 
-  return results
+  return results'''
 
 #should print ["one", "three", "five", "four"
 print(numbers_of_letters(1))
