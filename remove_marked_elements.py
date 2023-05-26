@@ -1,7 +1,16 @@
 #codewards kata => https://www.codewars.com/kata/563089b9b7be03472d00002b/train/python
 
 def remove_(integer_list, values_list):
-  return []
+  results = integer_list
+
+  for num in integer_list:
+    for value in values_list:
+      if num != value:
+        break
+      else:
+        results.remove(num)
+
+  return results
 
 #tests
 
