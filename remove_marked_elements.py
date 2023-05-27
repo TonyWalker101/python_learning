@@ -1,7 +1,8 @@
 #codewards kata => https://www.codewars.com/kata/563089b9b7be03472d00002b/train/python
 
 def remove_(integer_list, values_list):
-  results = []
+
+  '''results = []
 
   for i in range(len(integer_list)):
     if integer_list[i] in values_list:
@@ -9,7 +10,9 @@ def remove_(integer_list, values_list):
     else:
       results.append(integer_list[i])
 
-  return results
+  return results'''
+
+  return [integer_list[x] for x in range(len(integer_list)) if integer_list[x] not in values_list]
 
 #tests
 
