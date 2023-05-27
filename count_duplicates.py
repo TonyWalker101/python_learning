@@ -8,8 +8,7 @@ def duplicate_count(text):
   
   return len(results)
 
-
-
+#tests
 
 #should print 0 
 print(duplicate_count(""))
