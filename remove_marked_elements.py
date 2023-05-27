@@ -1,14 +1,13 @@
 #codewards kata => https://www.codewars.com/kata/563089b9b7be03472d00002b/train/python
 
 def remove_(integer_list, values_list):
-  results = integer_list
+  results = []
 
-  for num in integer_list:
-    for value in values_list:
-      if num != value:
-        break
-      else:
-        results.remove(num)
+  for i in range(len(integer_list)):
+    if integer_list[i] in values_list:
+      continue
+    else:
+      results.append(integer_list[i])
 
   return results
 
