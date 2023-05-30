@@ -10,7 +10,7 @@ def likes(names):
   elif len(names) < 4:
     return "{}, {} and {} like this".format(*names)
   else:
-    return "{}, {} and 2 others like this".format(*names)
+    return "{}, {} and {} others like this".format(names[0], names[1], len(names)-2)
 
 #tests
 
