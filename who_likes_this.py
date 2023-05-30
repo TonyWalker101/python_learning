@@ -3,5 +3,15 @@
 def likes(names):
   pass
 
+#tests
 
-
+#should print 'no one likes this'
+print(likes([]))
+#should print 'Peter likes this'
+print(likes(['Peter']))
+#should print 'Jacob and Alex like this'
+print(likes(['Jacob', 'Alex']))
+#should print 'Max, John and Mark like this'
+print(likes(['Max', 'John', 'Mark']))
+#should print 'Alex, Jacob and 2 others like this'
+print(likes(['Alex', 'Jacob', 'Mark', 'Max']))
