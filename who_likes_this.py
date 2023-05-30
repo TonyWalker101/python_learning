@@ -1,7 +1,16 @@
 #codewards kata => https://www.codewars.com/kata/5266876b8f4bf2da9b000362/python
 
 def likes(names):
-  pass
+  if len(names) == 0:
+    return "no one likes this"
+  elif len(names) == 1:
+    return "{} likes this".format(*names)
+  elif len(names) < 3:
+    return "{} and {} like this".format(*names)
+  elif len(names) < 4:
+    return "{}, {} and {} like this".format(*names)
+  else:
+    return "{}, {} and 2 others like this".format(*names)
 
 #tests
 
