@@ -9,6 +9,8 @@ def order(sentence):
       if char.isdigit():
         return int(char)
   
+  #bubble sort technique :3
+
   sentence_list = sentence.split(" ")
   index = len(sentence_list) - 1
   sorted = False
