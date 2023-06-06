@@ -1,7 +1,15 @@
 #codewars kata => https://www.codewars.com/kata/53697be005f803751e0015aa
+vowels = {"a": "1", "e": "2", "i": "3", "o": "4", "u": "5"}
 
 def encode(st):
-  return
+  results = ""
+  for letter in st:
+    if letter in vowels:
+      results += vowels[letter]
+    else:
+      results += letter
+
+  return results
     
 def decode(st):
   return
