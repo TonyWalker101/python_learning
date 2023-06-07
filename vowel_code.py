@@ -1,26 +1,14 @@
 #codewars kata => https://www.codewars.com/kata/53697be005f803751e0015aa
-vowels = {"a": "1", "e": "2", "i": "3", "o": "4", "u": "5"}
-vowel_codes = {"1": "a", "2": "e", "3": "i", "4": "o", "5": "u"}
+
+#refactored solution
+
+cipher = ("aeiou", "12345")
 
 def encode(st):
-  results = ""
-  for letter in st:
-    if letter in vowels:
-      results += vowels[letter]
-    else:
-      results += letter
-
-  return results
+  return st.translate(str.maketrans(cipher[0], cipher[1]))
     
 def decode(st):
-  results = ""
-  for letter in st:
-    if letter in vowel_codes:
-      results += vowel_codes[letter]
-    else:
-      results += letter
-
-  return results
+  return st.translate(str.maketrans(cipher[1], cipher[0]))
 
 #tests
 
