@@ -1,7 +1,14 @@
 #codewars kata => https://www.codewars.com/kata/5208f99aee097e6552000148/python
 
 def solution(s):
-  pass
+  results = ""
+  for letter in s:
+    if letter.isupper():
+      results += letter.upper()
+    else:
+      results += letter
+  
+  return results
 
 #tests
 
