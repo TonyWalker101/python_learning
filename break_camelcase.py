@@ -4,9 +4,8 @@ def solution(s):
   results = ""
   for letter in s:
     if letter.isupper():
-      results += letter.upper()
-    else:
-      results += letter
+      results += " "
+    results += letter
   
   return results
 
