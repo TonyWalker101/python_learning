@@ -4,7 +4,7 @@ from collections import Counter
 
 def find_it(seq):
   seq_count = Counter(seq)
-  return [key for key, val in seq_count.items() if val % 2 != 0]
+  return int(" ".join([str(key) for key, val in seq_count.items() if val % 2 != 0]))
 
 #should print 5
 print(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
