@@ -3,10 +3,7 @@
 from functools import reduce
 
 def grow(arr):
-
-  def multiply(x1, x2): return x1 * x2
-
-  return reduce(multiply,arr)
+  return reduce(lambda x,y: x*y, arr)
 
 #tests
 
