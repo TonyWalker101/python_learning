@@ -1,7 +1,12 @@
 #codewars kata => https://www.codewars.com/kata/57f780909f7e8e3183000078/python
 
+from functools import reduce
+
 def grow(arr):
-  pass
+
+  def multiply(x1, x2): return x1 * x2
+
+  return reduce(multiply,arr)
 
 #tests
 
