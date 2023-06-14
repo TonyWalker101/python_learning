@@ -1,7 +1,20 @@
 #codewars kata => https://www.codewars.com/kata/550498447451fbbd7600041c/train/python
 
+import math
+
 def comp(array1, array2):
-  pass
+  if array1 == None or array2 == None:
+    return False
+  
+  lookup_arr = list(map(lambda x: float(x), array1))
+
+  for num in array2:
+    if math.sqrt(num) in lookup_arr:
+      lookup_arr.remove(math.sqrt(num)) 
+    else:
+      return False
+  
+  return True
 
 #tests
 
