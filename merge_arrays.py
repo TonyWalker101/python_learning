@@ -1,7 +1,17 @@
 #codewars kata => https://www.codewars.com/kata/583af10620dda4da270000c5
 
 def mergeArrays(a, b):
-  pass
+  longer_length = len(a) if len(a) > len(b) else len(b)
+  results = []
+  
+  for i in range(longer_length):
+    try:
+      results.append(a[i])
+      results.append(b[i])
+    except:
+      continue
+
+  return results      
 
 #tests
 
