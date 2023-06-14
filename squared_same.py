@@ -3,7 +3,8 @@
 import math
 
 def comp(array1, array2):
-  if array1 == None or array2 == None:
+  
+  if not array1 or not array2:
     return False
   
   lookup_arr = list(map(lambda x: float(x), array1))
