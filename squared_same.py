@@ -3,19 +3,25 @@
 import math
 
 def comp(array1, array2):
-  
-  if not array1 or not array2:
-    return False
-  
-  lookup_arr = list(map(lambda x: float(x), array1))
 
-  for num in array2:
-    if math.sqrt(num) in lookup_arr:
-      lookup_arr.remove(math.sqrt(num)) 
-    else:
-      return False
+  # if not array1 or not array2:
+  #   return False
   
-  return True
+  # lookup_arr = list(map(lambda x: float(x), array1))
+
+  # for num in array2:
+  #   if math.sqrt(num) in lookup_arr:
+  #     lookup_arr.remove(math.sqrt(num)) 
+  #   else:
+  #     return False
+  
+  # return True
+
+  #refactored solution
+  try:
+    return sorted([i**2 for i in array1]) == sorted(array2)
+  except:
+    return False
 
 #tests
 
