@@ -1,7 +1,13 @@
 #codewars kata => https://www.codewars.com/kata/5f7c38eb54307c002a2b8cc8
 
+import re
+
 def remove_parentheses(s):
-  pass
+
+  while "(" in s:
+    s = re.sub("\([^()]*\)", "", s)
+  
+  return s
 
 #tests
 
