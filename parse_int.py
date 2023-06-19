@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1/python
 
 def get_age(age):
-  pass
+  return int("".join([char for char in age if char.isdigit()]))
 
 #tests
 
