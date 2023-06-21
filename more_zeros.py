@@ -1,7 +1,13 @@
 #codewars kata => https://www.codewars.com/kata/5d41e16d8bad42002208fe1a
 
 def more_zeros(s):
-  pass
+  results = []
+
+  for char in s:
+    if str(bin(ord(char))).count("0") > str(bin(ord(char))).count("1") and char not in results:
+      results.append(char)
+  
+  return results
 
 #tests
 
