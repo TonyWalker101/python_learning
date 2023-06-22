@@ -4,11 +4,8 @@ def more_zeros(s):
   results = []
 
   for char in s:
-    # if char.isdigit():
-    #   if str(bin(char)).count("0") > str(bin(char)).count("1") and char not in results:
-    #     results.append(char)
-
-    if str(bin(ord(char))).count("0") > str(bin(ord(char))).count("1") and char not in results and not str(bin(ord(char))).startswith("0"):
+    # print("str(bin(ord(char)))", str(bin(ord(char))))
+    if str(bin(ord(char))).count("0") > str(bin(ord(char))).count("1") and char not in results and not str(bin(ord(char))).startswith("0",2):
       results.append(char)
   
   return results
