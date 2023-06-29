@@ -3,15 +3,20 @@
 import string
 
 def find_secret_message(paragraph):
-  results = []
+  word_list = []
+  dupe_words = []
   formatted_paragraph = list(map(lambda x: x.lower().translate(str.maketrans("", "", string.punctuation)), paragraph.split()))
-  print(list(formatted_paragraph))
+  # print(list(formatted_paragraph))
 
   for word in formatted_paragraph:
-    if formatted_paragraph.count(word) > 1 and word not in results:
-      results.append(word)
+    # if formatted_paragraph.count(word) > 1 and word not in results:
+    #   results.append(word)
+    if word in word_list and word not in dupe_words:
+      dupe_words.append(word)
+
+    word_list.append(word)
     
-  return " ".join(results)
+  return " ".join(dupe_words)
 
 #tests
 
