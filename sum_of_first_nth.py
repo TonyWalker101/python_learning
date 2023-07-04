@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/555eded1ad94b00403000071/python
 
 def series_sum(n):
-  pass
+  return '{:.2f}'.format(sum(1.0/(3 * i + 1) for i in range(n)))
 
 #tests
 
