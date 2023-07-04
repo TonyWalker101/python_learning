@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce
 
 def no_odds(values):
-  pass
+  return [x for x in values if x % 2 == 0]
 
 #tests
 #should print [0]
