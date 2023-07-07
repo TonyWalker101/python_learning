@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/55ecd718f46fba02e5000029/python
 
 def between(a,b):
-  pass
+  return [num for num in range(a,b+1)]
 
 #tests
 
