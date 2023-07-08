@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/5ba38ba180824a86850000f7
 
 def solve(arr): 
-  pass
+  return list(set(arr))
 
 #tests
 
