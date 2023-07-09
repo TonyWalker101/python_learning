@@ -1,7 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/5ba38ba180824a86850000f7
 
 def solve(arr): 
-  return list(set(arr))
+  results = []
+  for i in arr[::-1]:
+    if i not in results:
+      results.append(i)
+  return results[::-1]
 
 #tests
 
