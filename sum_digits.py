@@ -1,7 +1,9 @@
 #codewars kata => https://www.codewars.com/kata/52f3149496de55aded000410/python
+from functools import reduce
 
 def sum_digits(number):
-  pass
+  sum = list(reduce(lambda x,y: x+y, str(number)))
+  return "".join(sum)
 
 #tests
 
