@@ -2,10 +2,15 @@
 from functools import reduce
 
 def sum_digits(number):
-  results = 0
+
+  #older solution
+  '''results = 0
   for num in str(abs(number)):
     results += int(num)
-  return results
+  return results'''
+
+  #refactored solution
+  return sum(int(x) for x in str(abs(number)))
 
 #tests
 
