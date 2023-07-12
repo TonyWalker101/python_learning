@@ -2,8 +2,10 @@
 from functools import reduce
 
 def sum_digits(number):
-  sum = list(reduce(lambda x,y: x+y, str(number)))
-  return "".join(sum)
+  results = 0
+  for num in str(abs(number)):
+    results += int(num)
+  return results
 
 #tests
 
