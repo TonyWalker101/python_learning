@@ -1,10 +1,19 @@
 #codewars kata => https://www.codewars.com/kata/5bd00c99dbc73908bb00057a
 
-def alpha_seq(string):
-  return
+import string
+
+def alpha_seq(s):
+  results = ""
+  for letter in sorted(s):
+    results += letter * (string.ascii_letters.index(letter) + 1) + ","
+  return results[:-1]
+
+  # return ",".join([letter * (string.ascii_letters.index(letter) + 1) for letter in sorted(s)])
 
 #tests
 
+
+print(alpha_seq("a"))
 #should print "A,Bb,Ccc,Ffffff,Ffffff"
 print(alpha_seq("BfcFA"))
 #should print "Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Xxxxxxxxxxxxxxxxxxxxxxxx,Zzzzzzzzzzzzzzzzzzzzzzzzzz"
