@@ -5,15 +5,14 @@ import string
 def alpha_seq(s):
   results = ""
   for letter in sorted(s):
-    results += letter * (string.ascii_letters.index(letter) + 1) + ","
+    temp = letter * (string.ascii_letters.index(letter.lower()) + 1) + ","
+    results += temp.capitalize()
   return results[:-1]
 
-  # return ",".join([letter * (string.ascii_letters.index(letter) + 1) for letter in sorted(s)])
+  # return ",".join([(letter * (string.ascii_letters.index(letter) + 1)).capitalize() for letter in sorted(s)])
 
 #tests
 
-
-print(alpha_seq("a"))
 #should print "A,Bb,Ccc,Ffffff,Ffffff"
 print(alpha_seq("BfcFA"))
 #should print "Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Xxxxxxxxxxxxxxxxxxxxxxxx,Zzzzzzzzzzzzzzzzzzzzzzzzzz"
