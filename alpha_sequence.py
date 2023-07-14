@@ -3,13 +3,13 @@
 import string
 
 def alpha_seq(s):
-  results = ""
-  for letter in sorted(s):
-    temp = letter * (string.ascii_letters.index(letter.lower()) + 1) + ","
-    results += temp.capitalize()
-  return results[:-1]
-
-  # return ",".join([(letter * (string.ascii_letters.index(letter) + 1)).capitalize() for letter in sorted(s)])
+  # results = ""
+  # for letter in sorted(s):
+  #   temp = letter * (string.ascii_letters.index(letter.lower()) + 1) + ","
+  #   results += temp.capitalize()
+  # return results[:-1]
+  
+  return ",".join( (c * (ord(c)-96)).capitalize() for c in sorted(s.lower()) )
 
 #tests
 
