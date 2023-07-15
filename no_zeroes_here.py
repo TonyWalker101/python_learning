@@ -1,7 +1,15 @@
 #codewars kata => https://www.codewars.com/kata/570a6a46455d08ff8d001002/python
 
 def no_boring_zeros(n):
-  pass
+  m = str(n)
+
+  if len(m) == 1:
+    return m
+  
+  while m[-1] == "0":
+    m = m[:-1]
+  
+  return m
 
 #tests
 
