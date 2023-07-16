@@ -10,7 +10,14 @@ class Fighter(object):
   __repr__=__str__
 
 def declare_winner(fighter1, fighter2, first_attacker):
-  pass
+  if fighter1.name == first_attacker:
+    first = fighter1
+    second = fighter2
+  else:
+     first = fighter2
+     second = fighter1
+
+  print("{} attacks {}; {} now has {} health.".format(first.name, second.name, first.name, (second.health - first.damage_per_attack)))
 
 #tests
 
