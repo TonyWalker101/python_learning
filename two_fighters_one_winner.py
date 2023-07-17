@@ -17,7 +17,10 @@ def declare_winner(fighter1, fighter2, first_attacker):
      first = fighter2
      second = fighter1
 
-  print("{} attacks {}; {} now has {} health.".format(first.name, second.name, first.name, (second.health - first.damage_per_attack)))
+  while first.health > 0:        
+      second.health -= first.damage_per_attack
+      first, second = second, first
+  return second.name
 
 #tests
 
