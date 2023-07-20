@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/586f6741c66d18c22800010a/python
 
 def sequence_sum(begin_number, end_number, step):
-  pass
+  return sum(range(begin_number, end_number+1, step))
 
 #tests
 
