@@ -3,10 +3,10 @@
 from collections import Counter
 
 def find_uniq(arr):
-  counted_arr = Counter(arr)
-  print(counted_arr)
-  
-  # return "".join([x for x in counted_arr if x == 1])
+
+  for key,val in Counter(arr).items():
+    if val == 1:
+      return key
 
 #tests
 
