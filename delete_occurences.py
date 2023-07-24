@@ -1,7 +1,13 @@
 #codewars kata => https://www.codewars.com/kata/554ca54ffa7d91b236000023/python
 
 def delete_nth(order,max_e):
-  pass
+  results = []
+
+  for num in order:
+    if results.count(num) < max_e:
+      results.append(num)
+
+  return results
 
 #tests
 
