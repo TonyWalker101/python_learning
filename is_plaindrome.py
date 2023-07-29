@@ -1,13 +1,18 @@
 #codewars kata => https://www.codewars.com/kata/57a1fd2ce298a731b20006a4/python
 
 def is_palindrome(s):
-  reverse_word = list(s.lower())
-  reverse_word.reverse()
-
-  if s.lower() == "".join(reverse_word):
-    return True
   
-  return False
+  #original solution
+  # reverse_word = list(s.lower())
+  # reverse_word.reverse()
+
+  # if s.lower() == "".join(reverse_word):
+  #   return True
+  
+  # return False
+
+  #refactored solution
+  return s.lower() == s.lower()[::-1]
 
 #tests
 
