@@ -6,11 +6,12 @@ def duplicate_encode(word):
   word_count = Counter(word)
   results = ""
 
-  for key,val in word_count.items():
-    if val > 1:
-      results += "("
-    if val == 1:
-      results += ")"
+  for letter in word:
+    for key,val in word_count.items():
+      if letter == key and val > 1:
+        results += ")"
+      if letter == key and val == 1:
+        results += "("
 
   return results
 
@@ -20,7 +21,7 @@ def duplicate_encode(word):
 print(duplicate_encode("din"))
 #should print "()()()"
 print(duplicate_encode("recede"))
-#should print "should ignore case"
-print(duplicate_encode("Success"),")())())")
+#should print ")())())"
+print(duplicate_encode("Success"))
 #should print "))(("
 print(duplicate_encode("(( @"))
