@@ -3,10 +3,10 @@
 from collections import Counter
 
 def duplicate_encode(word):
-  word_count = Counter(word)
+  word_count = Counter(word.lower())
   results = ""
 
-  for letter in word:
+  for letter in word.lower():
     for key,val in word_count.items():
       if letter == key and val > 1:
         results += ")"
