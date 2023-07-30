@@ -3,17 +3,22 @@
 from collections import Counter
 
 def duplicate_encode(word):
-  word_count = Counter(word.lower())
-  results = ""
+  #original solution
+  # word_count = Counter(word.lower())
+  # results = ""
 
-  for letter in word.lower():
-    for key,val in word_count.items():
-      if letter == key and val > 1:
-        results += ")"
-      if letter == key and val == 1:
-        results += "("
+  # for letter in word.lower():
+  #   for key,val in word_count.items():
+  #     if letter == key and val > 1:
+  #       results += ")"
+  #     if letter == key and val == 1:
+  #       results += "("
 
-  return results
+  # return results
+
+  #refactored solution
+  counter = Counter(word.lower())
+  return ''.join(('(' if counter[c] == 1 else ')') for c in word)
 
 #tests
 
