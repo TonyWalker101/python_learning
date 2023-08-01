@@ -2,7 +2,7 @@
 
 
 def reverse_list(l):
-  pass
+  return l[::-1]
 
 #tests
 
