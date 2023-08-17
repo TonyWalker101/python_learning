@@ -4,3 +4,9 @@ def is_valid_walk(walk):
   #determine if walk is valid
   pass
 
+#tests
+
+#should print True
+print(is_valid_walk(['n','s','n','s','n','s','n','s','n','s']))
+#should print False
+print(is_valid_walk(['n']))
