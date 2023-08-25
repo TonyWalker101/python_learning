@@ -3,3 +3,11 @@
 def sum_str(a, b):
   pass
 
+#tests
+
+#should print "9"
+print(sum_str("9",""))
+#should print "9"
+print(sum_str("","9"))
+#should print "0"
+print(sum_str("",""))
