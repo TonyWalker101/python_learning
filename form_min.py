@@ -1,7 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/5ac6932b2f317b96980000ca/python
 
+from collections import Counter
+
 def min_value(digits):
-  pass
+  unique_digits = sorted(list(Counter(digits)))
+  string_unique_digits = map(lambda x: str(x), unique_digits)
+  return int("".join(string_unique_digits))
 
 #tests
 
