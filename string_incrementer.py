@@ -1,7 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/54a91a4883a7de5d7800009c/python
 
+import re
+
 def increment_string(strng):
-  return strng
+  m = re.match('^(.*?)(\d+)$', strng)
+  name, num = (m.group(1), m.group(2)) if m else (strng, '0')
+  return '{0}{1:0{2}}'.format(name, int(num)+1, len(num))
 
 #tests
 
