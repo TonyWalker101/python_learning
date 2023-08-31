@@ -1,8 +1,16 @@
 #codewars kata => https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/python
 
 def distinct(seq):
-  return list(set(seq))
+  #initial solution
+  # return list(set(seq))
 
+  #alt solution
+  results = []
+  for digit in seq:
+    if digit not in results:
+      results.append(digit)
+  
+  return results
 #tests
 
 #should print [1]
