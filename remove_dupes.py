@@ -11,6 +11,7 @@ def distinct(seq):
       results.append(digit)
   
   return results
+
 #tests
 
 #should print [1]
