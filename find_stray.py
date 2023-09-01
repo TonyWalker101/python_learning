@@ -1,12 +1,10 @@
 #codewars kata => https://www.codewars.com/kata/57f609022f4d534f05000024/python
 
 def stray(arr):
-  results = arr[0]
-  for element in arr[1:]:
-    if results != element:
+  for element in arr:
+    if arr.count(element) == 1:
       return element
-
-  return results
+  
 #tests
 
 #should print 2
