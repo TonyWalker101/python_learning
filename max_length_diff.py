@@ -1,7 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/5663f5305102699bad000056/python
 
 def mxdiflg(a1, a2):
-  return -1
+  if not a1 and not a2:
+    return -1
+  
+  return max(abs(len(a1) - len(a2)))
+
 
 #tests
 
