@@ -1,7 +1,17 @@
 #codewars kata => https://www.codewars.com/kata/5a34b80155519e1a00000009/python
 
 def multiple_of_index(arr):
-  return [x for x in arr if x % (arr.index(x)) == 0]
+  results = []
+
+  for x in range(1,len(arr)):
+    if arr[x] == 0:
+      results.append(arr[x])
+      continue
+    if arr[x] % x == 0:
+      results.append(arr[x])
+  
+  return results
+
 
 #tests
 
