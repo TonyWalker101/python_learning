@@ -4,3 +4,9 @@ def reverse(st):
     # Your Code Here
   return st
 
+#tests
+
+#should print 'World Hello'
+print(reverse('Hello World'))
+#should print 'There. Hi'
+print(reverse('Hi There.'))
