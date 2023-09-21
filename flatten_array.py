@@ -1,7 +1,12 @@
 #codewars kata => https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/python
 
 def flatten_and_sort(array):
-  return []
+  results = []
+  for lst in array:
+    for element in lst:
+      results.append(element)
+
+  return sorted(results)
 
 #tests
 
