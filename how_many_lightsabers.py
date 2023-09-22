@@ -3,3 +3,11 @@
 def how_many_light_sabers_do_you_own(name):
   return
 
+#tests
+
+#should print 18
+print(how_many_light_sabers_do_you_own("Zach"))
+#should print 0
+print(how_many_light_sabers_do_you_own())
+#should print 0
+print(how_many_light_sabers_do_you_own("zach"))
