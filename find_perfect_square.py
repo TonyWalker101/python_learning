@@ -3,10 +3,15 @@
 from math import sqrt
 
 def find_next_square(sq):
+  
   if not int(sqrt(sq)):
     return -1
-  else:
-    return 0
+  
+  x = sq+1
+  while int(sqrt(x)):
+    x = x+1
+  
+  return x
 
 #tests
 
