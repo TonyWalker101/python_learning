@@ -1,7 +1,12 @@
 #codewars kata => https://www.codewars.com/kata/56269eb78ad2e4ced1000013/python
 
+from math import sqrt
+
 def find_next_square(sq):
-  return -1
+  if not int(sqrt(sq)):
+    return -1
+  else:
+    return 0
 
 #tests
 
