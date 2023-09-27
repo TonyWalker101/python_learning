@@ -1,17 +1,8 @@
 #codewars kata => https://www.codewars.com/kata/56269eb78ad2e4ced1000013/python
 
-from math import sqrt
-
 def find_next_square(sq):
-  
-  if not int(sqrt(sq)):
-    return -1
-  
-  x = sq+1
-  while not int(sqrt(x)):
-    x = x+1
-  
-  return x
+  x = sq**0.5
+  return -1 if x % 1 else (x+1)**2
 
 #tests
 
@@ -23,3 +14,5 @@ print(find_next_square(625))
 print(find_next_square(319225))
 #should print 15241630849
 print(find_next_square(15241383936))
+#should print -1
+print(find_next_square(3))
