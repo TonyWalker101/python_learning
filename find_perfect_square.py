@@ -8,7 +8,7 @@ def find_next_square(sq):
     return -1
   
   x = sq+1
-  while int(sqrt(x)):
+  while not int(sqrt(x)):
     x = x+1
   
   return x
