@@ -1,7 +1,9 @@
 #codewars kata => https://www.codewars.com/kata/514a024011ea4fb54200004b/python
 
+import re
+
 def domain_name(url):
-  pass
+  return re.search('(https?://)?(www\d?\.)?(?P<name>[\w-]+)\.', url).group('name')
 
 #tests
 
