@@ -1,12 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/python
 
 def remove_every_other(my_list):
-  chosen_word = my_list[0]
-  results = [chosen_word]
+  # chosen_word = my_list[0]
+  results = []
 
-  for word in range(len(my_list)-1):
-    if chosen_word in word:
-      results.append(word)
+  for i in range(0, len(my_list), 2):
+    results.append(my_list[i])
 
   return results
 
