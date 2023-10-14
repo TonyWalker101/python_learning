@@ -3,3 +3,11 @@
 def lovefunc( flower1, flower2 ):
   pass
 
+#should print True  
+print(lovefunc(1,4))
+#should print False
+print(lovefunc(2,2))
+#should print True
+print(lovefunc(0,1))
+#should print False
+print(lovefunc(0,0))
