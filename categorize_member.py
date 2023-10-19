@@ -1,6 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/python
 
 def open_or_senior(data):
+  #initial solution
   results = []
   for lst in data:
     if lst[0] >= 55 and lst[1] > 7:
@@ -8,6 +9,9 @@ def open_or_senior(data):
     else:
       results.append("Open")
   return results
+
+  #refactored solution
+  # return ["Senior" for lst in data if lst[0] >= 55 and lst[1] > 7 else "Open"]÷\
 
 #tests
 
