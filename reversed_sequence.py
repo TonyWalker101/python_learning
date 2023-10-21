@@ -3,3 +3,7 @@
 def reverse_seq(n):
   pass
 
+#test
+
+#should print [5,4,3,2,1]
+print(reverse_seq(5))
