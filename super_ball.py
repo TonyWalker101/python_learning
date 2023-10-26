@@ -3,3 +3,9 @@
 class Ball(object):
   pass
 
+#tests
+
+#should print "regular"
+print(Ball().ball_type)
+#should print "super"
+print(Ball('super').ball_type)
