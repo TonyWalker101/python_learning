@@ -2,9 +2,9 @@
 
 class Ball(object):
 
-  def __init__(self, name = ""):
+  def __init__(self, name = "regular"):
     self.name = name
-    self.ball_type = "super" if self.name == "super" else "regular"
+    self.ball_type = self.name 
 
 #tests
 
