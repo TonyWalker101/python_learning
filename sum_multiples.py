@@ -1,7 +1,20 @@
 #codewars kata => https://www.codewars.com/kata/57241e0f440cd279b5000829/python
 
 def sum_mul(n, m):
-  pass
+  results = n
+  x = n*n
+
+  if m <= n: 
+    return 'INVALID'
+
+  while True:
+    results += x
+    x *= n
+
+    if x >= m:
+      break
+
+  return x
 
 #tests
 
