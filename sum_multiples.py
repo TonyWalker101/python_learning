@@ -2,19 +2,19 @@
 
 def sum_mul(n, m):
   results = n
-  x = n*n
+  x = n+n
 
-  if m <= n: 
+  if m < n: 
     return 'INVALID'
 
   while True:
     results += x
-    x *= n
+    x += n
 
     if x >= m:
       break
-
-  return x
+    
+  return results
 
 #tests
 
@@ -24,3 +24,7 @@ print(sum_mul(0, 0))
 print(sum_mul(2, 9))
 #should print 'INVALID'
 print(sum_mul(4, -7))
+# #should print 30
+print(sum_mul(3, 13))
+# #should print 1860
+print(sum_mul(4, 123))
