@@ -1,20 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/5202ef17a402dd033c000009/python
 
 def title_case(title, minor_words=''):
-  lst_words = title.split(" ")
-  exc_words = list(map(lambda x: x.lower(), minor_words.split(" ")))
-  results = ""
-  print(exc_words)
+  lst_words = title.capitalize().split(" ")
+  exc_words = minor_words.lower().split(" ")
   
-  for word in lst_words:
-    if word.lower() not in exc_words or lst_words.index(word) == 0:
-      results += word.title()
-    else:
-      results += word.lower()
-    
-    results += " "
+  return " ".join(word if word in exc_words else word.capitalize() for word in lst_words)
 
-  return results.strip()
 #tests
 
 #should print ''
