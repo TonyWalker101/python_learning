@@ -3,3 +3,9 @@
 def derive(coefficient, exponent): 
   pass
 
+#tests
+
+#should print "56x^7"
+print(derive(7,8), )
+#should print 45x^8"
+print(derive(5,9))
