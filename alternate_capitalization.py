@@ -1,8 +1,13 @@
 #codewars kata => https://www.codewars.com/kata/59cfc000aeb2844d16000075/python
 
 def capitalize(s):
-  pass
+  results = []
 
+  results.append("".join(map(lambda x: x.upper() if s.index(x) % 2 == 0 else x,s.lower())))
+
+  results.append("".join(map(lambda x: x.upper() if s.index(x) % 2 != 0 else x,s.lower())))
+
+  return results
 #tests
 
 #should print ['AbCdEf', 'aBcDeF']
