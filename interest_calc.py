@@ -9,8 +9,7 @@ def calculate_years(principal, interest, tax, desired):
       return year
     else:
       year += 1
-      sum += sum * interest
-      sum -= ((sum * interest)*tax)
+      sum += (sum * interest) * (1-tax)
   
 #tests
 
