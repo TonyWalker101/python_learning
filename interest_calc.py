@@ -1,8 +1,17 @@
 #codewars kata => https://www.codewars.com/kata/563f037412e5ada593000114/python
 
 def calculate_years(principal, interest, tax, desired):
-  pass
+  year = 0
+  sum = principal
 
+  while True:
+    if sum >= desired:
+      return year
+    else:
+      year += 1
+      sum += sum * interest
+      sum -= ((sum * interest)*tax)
+  
 #tests
 
 #should print 3
