@@ -3,3 +3,17 @@
 def str_count(strng, letter):
   pass
 
+#tests
+
+#should print 2
+print(str_count('hello', 'l'))
+#should print 1
+print(str_count('hello', 'e'))
+#should print 1
+print(str_count('codewars', 'c'), 1)
+#should print 5
+print(str_count('ggggg', 'g'))
+#should print 2
+print(str_count('hello world', 'o'))
+#should print 0
+print(str_count('', 'z'))
