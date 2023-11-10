@@ -3,3 +3,23 @@
 def sp_eng(sentence): 
   pass
 
+#tests
+
+#should print True
+print(sp_eng("english"))
+#should print False
+print(sp_eng("egnlish"))
+#should printF alse
+print(sp_eng("1234egn lis;h"))
+#should print True
+print(sp_eng("1234english ;k"))
+#should print True
+print(sp_eng("English"))
+#should print True
+print(sp_eng("eNgliSh"))
+#should print True
+print(sp_eng("1234#$%%eNglish ;k9"))
+#should print False
+print(sp_eng("EGNlihs"))
+#should print False
+print(sp_eng("1234englihs**"))
