@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/58dbdccee5ee8fa2f9000058/python
 
 def sp_eng(sentence): 
-  pass
+  return "english" in sentence.lower()
 
 #tests
 
@@ -9,7 +9,7 @@ def sp_eng(sentence):
 print(sp_eng("english"))
 #should print False
 print(sp_eng("egnlish"))
-#should printF alse
+#should print False
 print(sp_eng("1234egn lis;h"))
 #should print True
 print(sp_eng("1234english ;k"))
