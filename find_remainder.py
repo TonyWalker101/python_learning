@@ -1,14 +1,12 @@
 #codewars kata => https://www.codewars.com/kata/524f5125ad9c12894e00003f/python
 
 def remainder(a,b):
-  if b == 0:
+  if min(a,b) == 0:
     return None
-  if b < 0:
-    b *= -1
-  if a < 0:
-    a *= -1 
-    
-  return a % b
+  if a > b:
+    a % b
+  else:
+    return b % a
 
 #tests
 
