@@ -3,3 +3,17 @@
 def get_even_numbers(arr):
   return 
 
+#tests
+
+#should print [2,4,6]
+print(get_even_numbers([2,4,5,6]))
+#should print []
+print(get_even_numbers([]))
+#should print []
+print(get_even_numbers([1]))
+#should print [2]
+print(get_even_numbers([1,2]))
+#should print  [2,4]
+print(get_even_numbers([1,2,3,4,5]))
+#should print [2,4,6,8]
+print(get_even_numbers([2,4,6,8]))
