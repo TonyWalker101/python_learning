@@ -3,3 +3,9 @@
 def main (verb, noun):
   return verb + noun
 
+#tests
+
+#should print 'take item'
+print(main('take ', 'item'))
+#should print 'use sword'
+print(main('use ', 'sword'))
