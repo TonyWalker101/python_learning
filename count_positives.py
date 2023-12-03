@@ -1,7 +1,19 @@
 #codeswars kata => https://www.codewars.com/kata/576bb71bbbcf0951d5000044/python
 
 def count_positives_sum_negatives(arr):
-  return
+  count = 0
+  sum = 0
+  
+  if arr == []:
+    return []
+  
+  for num in arr:
+    if num > 0:
+      count += 1
+    else:
+      sum += num
+
+  return [count,sum]
 
 #tests
 
