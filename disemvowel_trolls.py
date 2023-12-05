@@ -1,7 +1,13 @@
 #codewars kata => https://www.codewars.com/kata/52fba66badcd10859f00097e/python
 
 def disemvowel(string_):
-  return string_
+  results = ""
+
+  for letter in string_:
+    if letter.lower() not in ["a","e","i","o","u"]:
+      results += letter
+
+  return results
 
 #tests
 
