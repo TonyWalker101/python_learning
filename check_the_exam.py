@@ -1,7 +1,16 @@
 #codewars kata => https://www.codewars.com/kata/5a3dd29055519e23ec000074/python
 
 def check_exam(arr1,arr2):
-  pass
+  score = 0
+
+  for x in range(len(arr1)):
+    if arr2[x] == arr1[x]:
+      score += 4
+
+    elif arr2[x] != arr1[x] and arr2[x] != "":
+      score -= 1
+  
+  return score
 
 #tests
 
