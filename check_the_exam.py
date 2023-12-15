@@ -10,7 +10,10 @@ def check_exam(arr1,arr2):
     elif arr2[x] != arr1[x] and arr2[x] != "":
       score -= 1
   
-  return score
+  if score < 0:
+    return 0
+  else:
+    return score
 
 #tests
 
