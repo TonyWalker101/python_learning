@@ -1,7 +1,7 @@
 #codewars kata => https://www.codewars.com/kata/583710ccaa6717322c000105/python
 
 def simple_multiplication(number):
-  pass
+  return number * 8 if number % 2 == 0 else number * 9
 
 #tests
 
