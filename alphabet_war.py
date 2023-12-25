@@ -7,8 +7,10 @@ def alphabet_war(fight):
   for letter in fight:
     if letter in left_side:
       left_side["score"] += left_side[letter]
-    else:
+    if letter in right_side:
       right_side["score"] += right_side[letter]
+    else:
+      continue
   
   if left_side["score"] > right_side["score"]:
     return "Left side wins!"
