@@ -2,3 +2,16 @@
 
 def square_area(A):
   pass
+
+#tests
+
+#should print 1.62
+print(square_area(2))
+#should print 0
+print(square_area(0))
+#should print 80
+print(square_area(14.05))
+#should print 0.41
+print(square_area(1))
+#should print 4052.85
+print(square_area(100))
