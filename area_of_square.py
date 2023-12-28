@@ -1,7 +1,9 @@
 #codewars kata => https://www.codewars.com/kata/5748838ce2fab90b86001b1a/python
 
+from math import pi
+
 def square_area(A):
-  pass
+  return (2 * A / pi) ** 2
 
 #tests
 
