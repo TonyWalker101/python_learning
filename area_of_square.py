@@ -3,7 +3,7 @@
 from math import pi
 
 def square_area(A):
-  return (2 * A / pi) ** 2
+  return round((2 * A / pi) ** 2, 2)
 
 #tests
 
