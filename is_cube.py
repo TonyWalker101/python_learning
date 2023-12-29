@@ -2,3 +2,12 @@
 
 def cube_checker(volume, side):
   pass
+
+#tests
+
+#should print False
+print(cube_checker(-12,2))
+#should print False
+print(cube_checker(8, 3))
+#should print True
+print(cube_checker(8, 2))
