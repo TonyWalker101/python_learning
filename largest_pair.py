@@ -1,7 +1,11 @@
 #codewars kata => https://www.codewars.com/kata/556196a6091a7e7f58000018/python
 
 def largest_pair_sum(numbers): 
-  pass
+  first_largest = max(numbers)
+  numbers.remove(first_largest)
+  second_largest = max(numbers)
+
+  return first_largest + second_largest
 
 #tests
 
