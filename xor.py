@@ -3,3 +3,14 @@
 def xor(a,b):
   pass
 
+#tests
+
+#should print False
+print(xor(False, False))
+#should print True
+print(xor(True, False))
+#should print True
+print(xor(False, True))
+#should print False
+print(xor(True, True))
+
