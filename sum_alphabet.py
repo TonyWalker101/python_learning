@@ -3,3 +3,15 @@
 def words_to_marks(s):
   pass
 
+#tests
+
+#should print 100
+print(words_to_marks('attitude'))
+#should print 75
+print(words_to_marks('friends'))
+#should print 66
+print(words_to_marks('family'))
+#should print 99
+print(words_to_marks('selfness'))
+#should print 96
+print(words_to_marks('knowledge'))
