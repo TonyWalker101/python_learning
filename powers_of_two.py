@@ -4,7 +4,7 @@ def powers_of_two(n):
   answer = []
 
   for num in range(0,n+1):
-    answer.append(2**n)
+    answer.append(2**num)
   
   return answer
 
