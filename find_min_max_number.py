@@ -1,12 +1,12 @@
 #codewars kata => https://www.codewars.com/kata/577a98a6ae28071780000989/python
 
 def minimum(arr):
-  pass
+  return min(arr)
 
 def maximum(arr):
-  pass
+  return max(arr)
 
-#tests
+#min tests
 
 #should print -110
 print(minimum([-52, 56, 30, 29, -54, 0, -110]))
@@ -14,6 +14,9 @@ print(minimum([-52, 56, 30, 29, -54, 0, -110]))
 print(minimum([42, 54, 65, 87, 0]))
 #should print 1
 print(minimum([1, 2, 3, 4, 5, 10]))
+
+#max tests
+
 #should print 5
 print(maximum([5]))
 #should print 555
