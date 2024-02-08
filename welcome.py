@@ -19,7 +19,11 @@ def greet(language):
 , ("swedish", "Valkommen")
 , ("welsh", "Croeso")]
   
-  pass # your code here
+  for lang in languages_lst:
+    if lang[0] == language:
+      return lang[1]
+  
+  return "Welcome"
 
 #tests
 
@@ -30,6 +34,6 @@ print(greet('dutch'))
 #should print Welcome
 print(greet('IP_ADDRESS_INVALID'))
 #should print Welcome
-print(greet(''), 'Welcome')
+print(greet(''))
 #should print Welcome
-print(greet(2), 'Welcome')
+print(greet(2))
