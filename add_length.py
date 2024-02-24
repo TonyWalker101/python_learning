@@ -2,3 +2,15 @@
 
 def add_length(str_):
   pass
+
+
+#tests
+
+#should print ["apple 5", "ban 3"]
+print(add_length('apple ban'))
+#should print ["you 3", "will 4", "win 3"]
+print(add_length('you will win'))
+#should print ["you 3"]
+print(add_length('you'))
+#should print ["y 1"]
+print(add_length('y'))
