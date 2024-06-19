@@ -7,7 +7,7 @@ def vowel_indices(word):
   for letter in word:
     current_index += 1
 
-    if letter.lower() in ["a","e","i","o","u"]:
+    if letter.lower() in ["a","e","i","o","u","y"]:
       answer.append(current_index)
   
   return answer
