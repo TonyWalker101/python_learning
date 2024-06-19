@@ -1,7 +1,17 @@
 #codewars kata => https://www.codewars.com/kata/5680781b6b7c2be860000036/train/python
 
 def vowel_indices(word):
-  pass
+  answer = []
+  current_index = 0
+
+  for letter in word:
+    current_index += 1
+
+    if letter.lower() in ["a","e","i","o","u"]:
+      answer.append(current_index)
+  
+  return answer
+
 
 #tests
 
