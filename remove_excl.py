@@ -5,3 +5,11 @@ def remove(st, n):
 
 #tests
 
+#should print "Hi"
+print(remove("Hi!",1))
+#should print "Hi"
+print(remove("Hi!",100))
+#should print "Hi"!!
+print(remove("Hi!!!",1))
+#should print "Hi"
+print(remove("Hi!!!",100))
